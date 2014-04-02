@@ -114,7 +114,7 @@
           android:layout_height="35dp"
           android:layout_above="@+id/cancel_edit_caretaker"
           android:layout_centerHorizontal="true"
-          android:text="Edit Caretaker"
+          android:text="Add Caretaker"
           android:textSize="15dp" />
 
       <TextView

@@ -27,6 +27,10 @@ public class profile_page extends Activity{
         setContentView(R.layout.profile_page);
         
         TextView viewCaretakers= (TextView) findViewById(R.id.view_caretakers);
+        TextView updatePersonInfo= (TextView) findViewById(R.id.personal_info);
+        TextView updateAccountInfo= (TextView) findViewById(R.id.account_info);
+        TextView updateContactInfo= (TextView) findViewById(R.id.contact_info);
+        
         TextView viewAllergy = (TextView) findViewById(R.id.get_allergy);
         TextView viewImmunization= (TextView) findViewById(R.id.get_immunization);
         TextView viewBloodPressure= (TextView) findViewById(R.id.get_blood_pressure);
@@ -49,6 +53,33 @@ public class profile_page extends Activity{
           	 
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), caretakers.class);
+                startActivity(i); 
+
+            }
+	});
+        
+        updatePersonInfo.setOnClickListener(new View.OnClickListener() {
+         	 
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), update_person_info.class);
+                startActivity(i); 
+
+            }
+	});
+        
+        updateAccountInfo.setOnClickListener(new View.OnClickListener() {
+        	 
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), update_account_info.class);
+                startActivity(i); 
+
+            }
+	});
+        
+        updateContactInfo.setOnClickListener(new View.OnClickListener() {
+        	 
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), update_contact_info.class);
                 startActivity(i); 
 
             }

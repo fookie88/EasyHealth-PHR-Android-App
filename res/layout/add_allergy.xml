@@ -33,15 +33,6 @@
           android:paddingTop="5dip" >
       </LinearLayout>
 
-      <Button
-          android:id="@+id/submit_allergy"
-          android:layout_width="150dp"
-          android:layout_height="35dp"
-          android:layout_above="@+id/back_edit_allergy"
-          android:layout_centerHorizontal="true"
-          android:text="Add Allergy"
-          android:textSize="15dp" />
-
       <EditText
           android:id="@+id/allergy_allergen"
           android:layout_width="175dp"
@@ -160,7 +151,7 @@
           android:textSize="14sp" />
 
       <Button
-          android:id="@+id/back_edit_allergy"
+          android:id="@+id/back_allergy"
           android:layout_width="150dp"
           android:layout_height="35dp"
           android:layout_alignLeft="@+id/submit_allergy"
@@ -169,13 +160,22 @@
           android:textSize="15dp" />
 
       <EditText
-          android:id="@+id/response"
+          android:id="@+id/allergy_response"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/TextView04"
           android:layout_alignRight="@+id/allergy_onset_of_reaction"
           android:layout_below="@+id/allergy_onset_of_reaction"
           android:ems="10" />
+
+      <Button
+          android:id="@+id/submit_allergy"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/back_allergy"
+          android:layout_centerHorizontal="true"
+          android:text="Add Allergy"
+          android:textSize="15dp" />
 
   </RelativeLayout>
 

@@ -150,6 +150,15 @@
           android:textColor="#000"
           android:textSize="14sp" />
 
+      <EditText
+          android:id="@+id/blood_pressure_response"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView03"
+          android:layout_alignRight="@+id/blood_pressure_pulse"
+          android:layout_below="@+id/blood_pressure_pulse"
+          android:ems="10" />
+
   </RelativeLayout>
 
 </ScrollView>

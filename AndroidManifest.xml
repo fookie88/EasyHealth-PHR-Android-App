@@ -10,7 +10,7 @@
     <application android:icon="@drawable/logo" android:label="@string/app_name" android:restoreNeedsApplication="false">
         <activity android:name="LoginActivity"
                   android:label="Easy Health"
-                  android:windowSoftInputMode="stateHidden|adjustPan">
+                  android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,7 +20,7 @@
         <!--  Entry for RegisterActivity.class -->
         <activity android:name="RegisterActivity"
                   android:label="Register New Account"
-                  android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+                  android:windowSoftInputMode="stateHidden|adjustResize"></activity>
         <activity android:name="add_allergy" android:label="add_allergy" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:label="add_blood_pressure" android:name="add_blood_pressure" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:label="add_blood_sugar" android:name="add_blood_sugar" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
@@ -30,6 +30,9 @@
         <activity android:label="add_medication" android:name="add_medication" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name="add_temperature" android:label="add_temperature" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name="caretakers" android:label="caretakers" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="update_person_info" android:label="update_person_info" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="update_account_info" android:label="update_account_info" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="update_contact_info" android:label="update_contact_info" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name="profile_page" android:label="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name="update_allergy" android:label="update_allergy" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:label="update_blood_sugar" android:name="update_blood_sugar" android:windowSoftInputMode="stateHidden|adjustPan"></activity>

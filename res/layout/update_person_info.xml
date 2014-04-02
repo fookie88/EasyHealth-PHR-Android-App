@@ -172,12 +172,12 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_person_info_gender"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_person_info_gender"
           android:layout_below="@+id/TextView04"
           android:ems="10"
           android:hint="Enter Birthdate"
-          android:singleLine="true" 
-          android:inputType="datetime"/>
+          android:inputType="datetime"
+          android:singleLine="true" />
 
       <TextView
           android:id="@+id/TextView05"

@@ -17,7 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class add_allergy extends Activity{
-	TextView submitAllergy,allergen,allergic_reaction,age_of_onset,severity,onset_of_reaction,query_response;
+	TextView submitAllergy,allergen,allergic_reaction,age_of_onset,severity,onset_of_reaction,query_response,backAllergy;
 	ArrayList<NameValuePair> postParameters;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +31,13 @@ public class add_allergy extends Activity{
         setContentView(R.layout.add_allergy);
         postParameters = new ArrayList<NameValuePair>();
         submitAllergy= (TextView) findViewById(R.id.submit_allergy);
+        backAllergy= (TextView) findViewById(R.id.back_allergy);
         allergen= (TextView) findViewById(R.id.allergy_allergen);
         allergic_reaction= (TextView) findViewById(R.id.allergy_allergic_reaction);
         age_of_onset= (TextView) findViewById(R.id.allergy_age_of_onset);
         severity= (TextView) findViewById(R.id.allergy_severity);
         onset_of_reaction= (TextView) findViewById(R.id.allergy_onset_of_reaction);
-        query_response= (TextView) findViewById(R.id.response);
+        query_response= (TextView) findViewById(R.id.allergy_response);
         
         submitAllergy.setOnClickListener(new View.OnClickListener() {
             String response;
@@ -64,5 +65,14 @@ public class add_allergy extends Activity{
 				//startActivity(i); 
 				
             }});
+        
+        backAllergy.setOnClickListener(new View.OnClickListener() {
+         	 
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), profile_page.class);
+                startActivity(i); 
+
+            }
+	});
 	}
 }

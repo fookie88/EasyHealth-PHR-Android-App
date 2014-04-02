@@ -1,9 +1,12 @@
 package com.example.phr;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.TextView;
 
 public class add_blood_sugar extends Activity{
 	String userID;
@@ -19,5 +22,16 @@ public class add_blood_sugar extends Activity{
         // setting default screen to login.xml
         
         setContentView(R.layout.add_blood_sugar);
+        
+        TextView cancelBloodSugar= (TextView) findViewById(R.id.cancel_blood_sugar);
+        
+        cancelBloodSugar.setOnClickListener(new View.OnClickListener() {
+        	 
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), profile_page.class);
+                startActivity(i); 
+
+            }
+	});
 	}
 }

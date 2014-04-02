@@ -84,7 +84,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_email"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_email"
           android:layout_below="@+id/edit_contact_info_email"
           android:ems="10"
           android:hint="Enter Address"
@@ -95,7 +95,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_address"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_address"
           android:layout_below="@+id/edit_contact_info_address"
           android:ems="10"
           android:hint="Enter City"
@@ -106,19 +106,19 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_city"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_city"
           android:layout_below="@+id/edit_contact_info_city"
           android:ems="10"
           android:hint="Enter Postal Code"
-          android:singleLine="true" 
-          android:inputType="textCapCharacters"/>
+          android:inputType="textCapCharacters"
+          android:singleLine="true" />
 
       <EditText
           android:id="@+id/edit_contact_info_province"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_postal_code"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_postal_code"
           android:layout_below="@+id/edit_contact_info_postal_code"
           android:ems="10"
           android:hint="Enter Province"
@@ -173,7 +173,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_province"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_province"
           android:layout_below="@+id/TextView08"
           android:ems="10"
           android:hint="Enter County"
@@ -184,24 +184,24 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_country"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_country"
           android:layout_below="@+id/edit_contact_info_country"
           android:ems="10"
           android:hint="Enter Home Phone Number"
-          android:singleLine="true" 
-          android:inputType="phone"/>
+          android:inputType="phone"
+          android:singleLine="true" />
 
       <EditText
           android:id="@+id/edit_contact_info_cell_phone_number"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/edit_contact_info_home_phone_number"
-          android:layout_alignParentRight="true"
+          android:layout_alignRight="@+id/edit_contact_info_home_phone_number"
           android:layout_below="@+id/edit_contact_info_home_phone_number"
           android:ems="10"
           android:hint="Enter Cell Phone Number"
-          android:singleLine="true" 
-          android:inputType="phone"/>
+          android:inputType="phone"
+          android:singleLine="true" />
 
       <TextView
           android:id="@+id/TextView01"
