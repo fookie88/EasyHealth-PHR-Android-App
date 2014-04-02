@@ -11,8 +11,8 @@ public class profile_page extends Activity{
     
 	String userID;
 	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 		userID = getIntent().getExtras().getString("userID");
-        super.onCreate(savedInstanceState);
         if (android.os.Build.VERSION.SDK_INT > 9) {
         	StrictMode.ThreadPolicy policy = 
         	        new StrictMode.ThreadPolicy.Builder().permitAll().build();

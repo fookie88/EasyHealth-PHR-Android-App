@@ -6,9 +6,11 @@ import android.os.StrictMode;
 import android.widget.TextView;
 
 public class view_allergy extends Activity{
+	String userID;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (android.os.Build.VERSION.SDK_INT > 9) {
+        userID = getIntent().getExtras().getString("userID");
+         if (android.os.Build.VERSION.SDK_INT > 9) {
         	StrictMode.ThreadPolicy policy = 
         	        new StrictMode.ThreadPolicy.Builder().permitAll().build();
         	StrictMode.setThreadPolicy(policy);
@@ -16,7 +18,7 @@ public class view_allergy extends Activity{
         // setting default screen to login.xml
         
         setContentView(R.layout.view_allergy);
-        String [] arrayOfElements= getResources().getStringArray(getResources().getIdentifier("allergy_arrays","string" , getPackageName()));
+        //String [] arrayOfElements= getResources().getStringArray(getResources().getIdentifier("allergy_arrays","string" , getPackageName()));
         
 	}
 }

@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.os.StrictMode;
 
 public class view_immunization extends Activity{
+	String userID;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (android.os.Build.VERSION.SDK_INT > 9) {
+        userID = getIntent().getExtras().getString("userID");
+         if (android.os.Build.VERSION.SDK_INT > 9) {
         	StrictMode.ThreadPolicy policy = 
         	        new StrictMode.ThreadPolicy.Builder().permitAll().build();
         	StrictMode.setThreadPolicy(policy);
