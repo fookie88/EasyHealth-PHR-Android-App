@@ -127,6 +127,17 @@
           android:textColor="#000"
           android:textSize="14sp" />
 
+      <EditText
+          android:id="@+id/height_weight_response"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView02"
+          android:layout_alignRight="@+id/weight"
+          android:layout_below="@+id/weight"
+          android:background="#ffffff"
+          android:ems="10"
+          android:textColor="#000" />
+
   </RelativeLayout>
 
 </ScrollView>

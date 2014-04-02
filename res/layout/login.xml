@@ -96,7 +96,9 @@
                android:id="@+id/login_error"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:ems="10"/>
+               android:background="#ffffff"
+          	   android:ems="10"
+               android:textColor="#000"/>
 
            <TextView
                android:id="@+id/link_to_register"

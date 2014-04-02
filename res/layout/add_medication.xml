@@ -33,30 +33,12 @@
           android:paddingTop="5dip" >
       </LinearLayout>
 
-      <Button
-          android:id="@+id/submit_medication"
-          android:layout_width="150dp"
-          android:layout_height="35dp"
-          android:layout_above="@+id/cancel_medication"
-          android:layout_centerHorizontal="true"
-          android:text="Add Medication"
-          android:textSize="15dp" />
-
-      <Button
-          android:id="@+id/cancel_medication"
-          android:layout_width="150dp"
-          android:layout_height="35dp"
-          android:layout_alignLeft="@+id/submit_medication"
-          android:layout_alignParentBottom="true"
-          android:text="Cancel"
-          android:textSize="15dp" />
-
       <requestFocus
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" />
 
       <EditText
-          android:id="@+id/medication_vaccine_name"
+          android:id="@+id/medication_drug_name"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/medication_type"
@@ -70,9 +52,9 @@
           android:id="@+id/medication_dose"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignLeft="@+id/medication_vaccine_name"
-          android:layout_alignRight="@+id/medication_vaccine_name"
-          android:layout_below="@+id/medication_vaccine_name"
+          android:layout_alignLeft="@+id/medication_drug_name"
+          android:layout_alignRight="@+id/medication_drug_name"
+          android:layout_below="@+id/medication_drug_name"
           android:ems="10"
           android:hint="Enter Dose"
           android:singleLine="true" />
@@ -104,8 +86,8 @@
           android:id="@+id/TextView01"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignBaseline="@+id/medication_vaccine_name"
-          android:layout_alignBottom="@+id/medication_vaccine_name"
+          android:layout_alignBaseline="@+id/medication_drug_name"
+          android:layout_alignBottom="@+id/medication_drug_name"
           android:layout_alignLeft="@+id/textView1"
           android:text="Drug Name:"
           android:textColor="#000"
@@ -281,6 +263,35 @@
           android:text="Renew Date:"
           android:textColor="#000"
           android:textSize="14sp" />
+
+      <Button
+          android:id="@+id/cancel_medication"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/submit_medication"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:text="Add Medication"
+          android:textSize="15dp" />
+
+      <EditText
+          android:id="@+id/medication_response"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView09"
+          android:layout_alignRight="@+id/medication_renew_date"
+          android:layout_below="@+id/TextView09"
+          android:background="#ffffff"
+          android:ems="10"
+          android:textColor="#000" />
 
   </RelativeLayout>
 

@@ -157,7 +157,9 @@
           android:layout_alignLeft="@+id/TextView03"
           android:layout_alignRight="@+id/blood_pressure_pulse"
           android:layout_below="@+id/blood_pressure_pulse"
-          android:ems="10" />
+          android:background="#ffffff"
+          android:ems="10"
+          android:textColor="#000" />
 
   </RelativeLayout>
 

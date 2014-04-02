@@ -33,24 +33,6 @@
           android:paddingTop="5dip" >
       </LinearLayout>
 
-      <Button
-          android:id="@+id/submit_immunization"
-          android:layout_width="150dp"
-          android:layout_height="35dp"
-          android:layout_above="@+id/cancel_immunization"
-          android:layout_centerHorizontal="true"
-          android:text="Add Immunization"
-          android:textSize="15dp" />
-
-      <Button
-          android:id="@+id/cancel_immunization"
-          android:layout_width="150dp"
-          android:layout_height="35dp"
-          android:layout_alignLeft="@+id/submit_immunization"
-          android:layout_alignParentBottom="true"
-          android:text="Cancel"
-          android:textSize="15dp" />
-
       <EditText
           android:id="@+id/immunization_type"
           android:layout_width="175dp"
@@ -256,6 +238,35 @@
           android:text="Comments:"
           android:textColor="#000"
           android:textSize="14sp" />
+
+      <EditText
+          android:id="@+id/immunization_response"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView08"
+          android:layout_alignRight="@+id/immunization_comments"
+          android:layout_below="@+id/immunization_comments"
+          android:background="#ffffff"
+          android:ems="10"
+          android:textColor="#000" />
+
+      <Button
+          android:id="@+id/submit_immunization"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:text="Add Immunization"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/cancel_immunization"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
 
   </RelativeLayout>
 
