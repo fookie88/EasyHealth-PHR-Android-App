@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff" >
+
+      <!-- Header Starts -->
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="#ffffff"
+          android:orientation="vertical"
+          android:paddingBottom="5dip"
+          android:paddingTop="5dip" >
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/edit_immunization"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/cancel_edit_immunization"
+          android:layout_centerHorizontal="true"
+          android:text="Edit Immunization"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/cancel_edit_immunization"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignLeft="@+id/edit_immunization"
+          android:layout_alignParentBottom="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
+
+      <EditText
+          android:id="@+id/edit_immunization_type"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/header"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="40dp"
+          android:ems="10"
+          android:hint="Enter Type"
+          android:singleLine="true" />
+
+      <requestFocus
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+      <EditText
+          android:id="@+id/edit_immunization_vaccine_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_type"
+          android:layout_alignRight="@+id/edit_immunization_type"
+          android:layout_below="@+id/edit_immunization_type"
+          android:ems="10"
+          android:hint="Enter Vaccine Name"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_immunization_manufacturer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_vaccine_name"
+          android:layout_alignRight="@+id/edit_immunization_vaccine_name"
+          android:layout_below="@+id/edit_immunization_vaccine_name"
+          android:ems="10"
+          android:hint="Enter Manufacturer"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_immunization_dose"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_route"
+          android:layout_alignRight="@+id/edit_immunization_route"
+          android:layout_below="@+id/edit_immunization_route"
+          android:ems="10"
+          android:hint="Enter Dose Amount"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_immunization_route"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_manufacturer"
+          android:layout_alignRight="@+id/edit_immunization_manufacturer"
+          android:layout_below="@+id/edit_immunization_manufacturer"
+          android:ems="10"
+          android:hint="Enter Route"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView01"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_vaccine_name"
+          android:layout_alignBottom="@+id/edit_immunization_vaccine_name"
+          android:layout_alignLeft="@+id/textView1"
+          android:text="Vaccine Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_manufacturer"
+          android:layout_alignBottom="@+id/edit_immunization_manufacturer"
+          android:layout_alignLeft="@+id/TextView01"
+          android:text="Manufacturer:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView03"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_route"
+          android:layout_alignBottom="@+id/edit_immunization_route"
+          android:layout_alignLeft="@+id/TextView02"
+          android:text="Route:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_type"
+          android:layout_alignBottom="@+id/edit_immunization_type"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="14dp"
+          android:text="Type:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <EditText
+          android:id="@+id/edit_immunization_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_dose"
+          android:layout_alignRight="@+id/edit_immunization_dose"
+          android:layout_below="@+id/edit_immunization_dose"
+          android:ems="10"
+          android:hint="Enter Date"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_immunization_location"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_date"
+          android:layout_alignRight="@+id/edit_immunization_date"
+          android:layout_below="@+id/edit_immunization_date"
+          android:ems="10"
+          android:hint="Enter Location"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_immunization_next_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_location"
+          android:layout_alignRight="@+id/edit_immunization_location"
+          android:layout_below="@+id/edit_immunization_location"
+          android:ems="10"
+          android:hint="Enter Next Date"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_immunization_comments"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_immunization_location"
+          android:layout_alignRight="@+id/edit_immunization_next_date"
+          android:layout_below="@+id/edit_immunization_next_date"
+          android:ems="10"
+          android:hint="Enter Comments"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView04"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_dose"
+          android:layout_alignBottom="@+id/edit_immunization_dose"
+          android:layout_alignLeft="@+id/TextView03"
+          android:text="Dose:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView05"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_date"
+          android:layout_alignBottom="@+id/edit_immunization_date"
+          android:layout_alignLeft="@+id/TextView04"
+          android:text="Date:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView06"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_location"
+          android:layout_alignBottom="@+id/edit_immunization_location"
+          android:layout_alignLeft="@+id/TextView05"
+          android:text="Location:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView07"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_next_date"
+          android:layout_alignBottom="@+id/edit_immunization_next_date"
+          android:layout_alignLeft="@+id/TextView06"
+          android:text="Next Date:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView08"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_immunization_comments"
+          android:layout_alignBottom="@+id/edit_immunization_comments"
+          android:layout_alignLeft="@+id/TextView07"
+          android:text="Comments:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+  </RelativeLayout>
+
+</ScrollView>

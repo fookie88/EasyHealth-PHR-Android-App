@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.phr"
+      android:versionCode="1"
+      android:versionName="1.0">
+     <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+    <application android:icon="@drawable/logo" android:label="@string/app_name" android:restoreNeedsApplication="false">
+        <activity android:name="LoginActivity"
+                  android:label="Easy Health"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+ 
+        <!--  Entry for RegisterActivity.class -->
+        <activity android:name="RegisterActivity"
+                  android:label="Register New Account"
+                  android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="add_allergy" android:label="add_allergy" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="add_blood_pressure" android:name="add_blood_pressure" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="add_blood_sugar" android:name="add_blood_sugar" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="add_emergency_contact" android:label="add_emergency_contact" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="add_height_weight" android:label="add_height_weight" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="add_immunization" android:label="add_immunization" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="add_medication" android:name="add_medication" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="add_temperature" android:label="add_temperature" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="caretakers" android:label="caretakers" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="profile_page" android:label="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="update_allergy" android:label="update_allergy" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="update_blood_sugar" android:name="update_blood_sugar" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="update_caretaker" android:label="update_caretaker" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="update_emergency_contact" android:name="update_emergency_contact" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="update_height_weight" android:label="update_height_weight" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="update_immunization" android:name="update_immunization" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="update_medication" android:name="update_medication" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="update_temperature" android:name="update_temperature" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="update_blood_pressure" android:name="update_blood_pressure" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_allergy" android:name="view_allergy" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_blood_pressure" android:name="view_blood_pressure" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_blood_sugar" android:name="view_blood_sugar" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name="view_emergency_contact" android:label="view_emergency_contact" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_height_weight" android:name="view_height_weight" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_immunization" android:name="view_immunization" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_medication" android:name="view_medication" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_temperature" android:name="view_temperature" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        
+
+        
+</application>
+
+
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>

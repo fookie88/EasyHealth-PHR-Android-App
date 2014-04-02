@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff" >
+
+      <!-- Header Starts -->
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="#ffffff"
+          android:orientation="vertical"
+          android:paddingBottom="5dip"
+          android:paddingTop="5dip" >
+      </LinearLayout>
+
+      <EditText
+          android:id="@+id/edit_caretaker_name"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/header"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="40dp"
+          android:ems="10"
+          android:hint="Enter Caretaker Name"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_caretaker_name"
+          android:layout_alignBottom="@+id/edit_caretaker_name"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="14dp"
+          android:text="Caretaker Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <EditText
+          android:id="@+id/edit_caretaker_email"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_caretaker_name"
+          android:layout_below="@+id/edit_caretaker_name"
+          android:ems="10"
+          android:hint="Enter Caretaker Email"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_caretaker_phone_number"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_caretaker_email"
+          android:layout_below="@+id/edit_caretaker_email"
+          android:ems="10"
+          android:hint="Enter Caretaker Phone Number"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView01"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_caretaker_email"
+          android:layout_alignBottom="@+id/edit_caretaker_email"
+          android:layout_alignLeft="@+id/textView1"
+          android:text="Email Address:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_caretaker_phone_number"
+          android:layout_alignBottom="@+id/edit_caretaker_phone_number"
+          android:layout_alignLeft="@+id/TextView01"
+          android:text="Phone Number:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <Button
+          android:id="@+id/cancel_edit_caretaker"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignLeft="@+id/edit_caretaker"
+          android:layout_alignParentBottom="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/edit_caretaker"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/cancel_edit_caretaker"
+          android:layout_centerHorizontal="true"
+          android:text="Edit Caretaker"
+          android:textSize="15dp" />
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/textView1"
+          android:layout_alignRight="@+id/edit_caretaker_name"
+          android:layout_below="@+id/header"
+          android:text="Caretaker Info"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:textColor="#000" />
+
+      <TextView
+          android:id="@+id/TextView03"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView02"
+          android:layout_alignRight="@+id/edit_caretaker_phone_number"
+          android:layout_below="@+id/edit_caretaker_phone_number"
+          android:layout_marginTop="24dp"
+          android:text="Caretaker View Permissions"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:textColor="#000" />
+      
+      <CheckBox
+          android:id="@+id/edit_permission_immunization"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_permission_allergies"
+          android:layout_below="@+id/edit_permission_medication"
+          android:checked="true"
+          android:text="Immunization"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_blood_sugar"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_permission_immunization"
+          android:layout_below="@+id/edit_permission_immunization"
+          android:checked="true"
+          android:text="Blood Sugar"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_blood_pressure"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_permission_blood_sugar"
+          android:layout_below="@+id/edit_permission_blood_sugar"
+          android:checked="true"
+          android:text="Blood Pressure"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_allergies"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/edit_permission_immunization"
+          android:layout_alignParentLeft="true"
+          android:checked="true"
+          android:text="Allergies"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_medication"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/TextView03"
+          android:layout_centerVertical="true"
+          android:checked="true"
+          android:text="Medication"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_temperature"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/edit_permission_height_weight"
+          android:layout_alignLeft="@+id/edit_permission_medication"
+          android:checked="true"
+          android:text="Temperature"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_height_weight"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/edit_permission_blood_pressure"
+          android:layout_alignLeft="@+id/edit_permission_temperature"
+          android:checked="true"
+          android:text="Height &amp; Weight"
+          android:textColor="#000" />
+
+      <CheckBox
+          android:id="@+id/edit_permission_emergency_contact"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_permission_blood_pressure"
+          android:layout_alignBottom="@+id/edit_permission_blood_pressure"
+          android:layout_alignLeft="@+id/edit_permission_height_weight"
+          android:checked="true"
+          android:text="Emergency Contacts"
+          android:textColor="#000" />
+
+  </RelativeLayout>
+
+</ScrollView>

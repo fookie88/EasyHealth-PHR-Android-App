@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Easy Health</string>
+
+	    <string name="view_by_prompt">View By</string>
+ 
+    <string-array name="allergy_arrays">
+        <item>Allergen</item>
+        <item>Allergic Reaction</item>
+        <item>Age of Onset</item>
+        <item>Severity</item>
+        <item>Onset of Reaction</item>
+    </string-array>
+    
+    <string-array name="immunization_arrays">
+        <item>Date</item>
+        <item>Immunization Type</item>
+        <item>Vaccine Name</item>
+        <item>Manufacture</item>
+        <item>Route</item>
+        <item>Dose</item>
+        <item>Location</item>
+        <item>Next Date</item>
+        <item>Comments</item>
+    </string-array>
+    
+    <string-array name="blood_sugar_arrays">
+        <item>Date</item>
+        <item>Blood Sugar</item>
+    </string-array>
+    
+    <string-array name="medication_arrays">
+        <item>Drug</item>
+        <item>Medication</item>
+        <item>Dose</item>
+        <item>Strength</item>
+        <item>Frequency</item>
+        <item>Date Started</item>
+        <item>Date Stopped</item>
+        <item>Reason</item>
+        <item>Refill Date</item>
+        <item>Renew Date</item>
+    </string-array>
+    
+    <string-array name="temperature_arrays">
+        <item>Date</item>
+        <item>Temperature</item>
+    </string-array>
+    
+    <string-array name="blood_pressure_arrays">
+        <item>Date</item>
+        <item>Systolic</item>
+        <item>Diastolic</item>
+        <item>Pulse</item>
+    </string-array>
+    
+    <string-array name="height_weight_arrays">
+        <item>Date</item>
+        <item>Height</item>
+        <item>Weight</item>
+    </string-array>
+    
+    <string-array name="emergency_contact_arrays">
+        <item>Contact Name</item>
+        <item>Number 1</item>
+        <item>Number 2</item>
+        <item>Email</item>
+        <item>Relationship</item>
+    </string-array>
+	
+</resources>

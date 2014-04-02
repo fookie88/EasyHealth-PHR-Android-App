@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff" >
+
+      <!-- Header Starts -->
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="#ffffff"
+          android:orientation="vertical"
+          android:paddingBottom="5dip"
+          android:paddingTop="5dip" >
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/edit_person_info"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/back_edit_person_info"
+          android:layout_centerHorizontal="true"
+          android:text="Edit Person Info"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/back_edit_person_info"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignLeft="@+id/edit_person_info"
+          android:layout_alignParentBottom="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
+
+      <EditText
+          android:id="@+id/edit_person_info_first_name"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/header"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="40dp"
+          android:ems="10"
+          android:hint="Enter First Name"
+          android:singleLine="true" />
+
+      <requestFocus
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+      <EditText
+          android:id="@+id/edit_person_info_last_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_person_info_first_name"
+          android:layout_alignRight="@+id/edit_person_info_first_name"
+          android:layout_below="@+id/edit_person_info_first_name"
+          android:ems="10"
+          android:hint="Enter Last Name"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_person_info_middle_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_person_info_last_name"
+          android:layout_alignRight="@+id/edit_person_info_last_name"
+          android:layout_below="@+id/edit_person_info_last_name"
+          android:ems="10"
+          android:hint="Enter Middle Name"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_person_info_gender"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_person_info_family_name"
+          android:layout_alignRight="@+id/edit_person_info_family_name"
+          android:layout_below="@+id/edit_person_info_family_name"
+          android:ems="10"
+          android:hint="Enter Gender"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_person_info_family_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_person_info_middle_name"
+          android:layout_alignRight="@+id/edit_person_info_middle_name"
+          android:layout_below="@+id/edit_person_info_middle_name"
+          android:ems="10"
+          android:hint="Enter Family Name"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView01"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_person_info_last_name"
+          android:layout_alignBottom="@+id/edit_person_info_last_name"
+          android:layout_alignLeft="@+id/textView1"
+          android:text="Last Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_person_info_middle_name"
+          android:layout_alignBottom="@+id/edit_person_info_middle_name"
+          android:layout_alignLeft="@+id/TextView01"
+          android:text="Middle Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView03"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_person_info_family_name"
+          android:layout_alignBottom="@+id/edit_person_info_family_name"
+          android:layout_alignLeft="@+id/TextView02"
+          android:text="Family Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_person_info_first_name"
+          android:layout_alignBottom="@+id/edit_person_info_first_name"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="14dp"
+          android:text="First Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView04"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_person_info_gender"
+          android:layout_alignBottom="@+id/edit_person_info_gender"
+          android:layout_alignLeft="@+id/TextView03"
+          android:text="Gender:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <EditText
+          android:id="@+id/edit_person_info_birthdate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_person_info_gender"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/TextView04"
+          android:ems="10"
+          android:hint="Enter Birthdate"
+          android:singleLine="true" 
+          android:inputType="datetime"/>
+
+      <TextView
+          android:id="@+id/TextView05"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_person_info_birthdate"
+          android:layout_alignBottom="@+id/edit_person_info_birthdate"
+          android:layout_alignLeft="@+id/TextView04"
+          android:text="Birthdate:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+  </RelativeLayout>
+
+</ScrollView>

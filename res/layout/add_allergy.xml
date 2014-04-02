@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff" >
+
+      <!-- Header Starts -->
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="#ffffff"
+          android:orientation="vertical"
+          android:paddingBottom="5dip"
+          android:paddingTop="5dip" >
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/submit_allergy"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/back_edit_allergy"
+          android:layout_centerHorizontal="true"
+          android:text="Add Allergy"
+          android:textSize="15dp" />
+
+      <EditText
+          android:id="@+id/allergy_allergen"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/header"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="40dp"
+          android:ems="10"
+          android:hint="Enter Allergen"
+          android:singleLine="true" />
+
+      <requestFocus
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+      <EditText
+          android:id="@+id/allergy_allergic_reaction"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/allergy_allergen"
+          android:layout_alignRight="@+id/allergy_allergen"
+          android:layout_below="@+id/allergy_allergen"
+          android:ems="10"
+          android:hint="Enter Allergic Reaction"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/allergy_age_of_onset"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/allergy_allergic_reaction"
+          android:layout_alignRight="@+id/allergy_allergic_reaction"
+          android:layout_below="@+id/allergy_allergic_reaction"
+          android:ems="10"
+          android:hint="Enter Age of Onset"
+          android:singleLine="true" 
+          android:inputType="number"/>
+
+      <EditText
+          android:id="@+id/allergy_onset_of_reaction"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/allergy_severity"
+          android:layout_alignRight="@+id/allergy_severity"
+          android:layout_below="@+id/allergy_severity"
+          android:ems="10"
+          android:hint="Enter Onset of Reaction"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/allergy_severity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/allergy_age_of_onset"
+          android:layout_alignRight="@+id/allergy_age_of_onset"
+          android:layout_below="@+id/allergy_age_of_onset"
+          android:ems="10"
+          android:hint="Enter Severity"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView01"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/allergy_allergic_reaction"
+          android:layout_alignBottom="@+id/allergy_allergic_reaction"
+          android:layout_alignLeft="@+id/textView1"
+          android:text="Allergic Reaction:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/allergy_age_of_onset"
+          android:layout_alignBottom="@+id/allergy_age_of_onset"
+          android:layout_alignLeft="@+id/TextView01"
+          android:text="Age of Onset:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView03"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/allergy_severity"
+          android:layout_alignBottom="@+id/allergy_severity"
+          android:layout_alignLeft="@+id/TextView02"
+          android:text="Severity:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/allergy_allergen"
+          android:layout_alignBottom="@+id/allergy_allergen"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="14dp"
+          android:text="Allergen:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView04"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/allergy_onset_of_reaction"
+          android:layout_alignBottom="@+id/allergy_onset_of_reaction"
+          android:layout_alignLeft="@+id/TextView03"
+          android:text="Onset of Reaction"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <Button
+          android:id="@+id/back_edit_allergy"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignLeft="@+id/submit_allergy"
+          android:layout_alignParentBottom="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
+
+      <EditText
+          android:id="@+id/response"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView04"
+          android:layout_alignRight="@+id/allergy_onset_of_reaction"
+          android:layout_below="@+id/allergy_onset_of_reaction"
+          android:ems="10" />
+
+  </RelativeLayout>
+
+</ScrollView>

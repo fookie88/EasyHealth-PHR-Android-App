@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff" >
+
+      <!-- Header Starts -->
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="#ffffff"
+          android:orientation="vertical"
+          android:paddingBottom="5dip"
+          android:paddingTop="5dip" >
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/edit_medication"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/cancel_edit_medication"
+          android:layout_centerHorizontal="true"
+          android:text="Edit Medication"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/cancel_edit_medication"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignLeft="@+id/edit_medication"
+          android:layout_alignParentBottom="true"
+          android:text="Cancel"
+          android:textSize="15dp" />
+
+      <requestFocus
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+      <EditText
+          android:id="@+id/edit_medication_vaccine_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_type"
+          android:layout_alignRight="@+id/edit_medication_type"
+          android:layout_below="@+id/edit_medication_type"
+          android:ems="10"
+          android:hint="Enter Medication Name"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_dose"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_vaccine_name"
+          android:layout_alignRight="@+id/edit_medication_vaccine_name"
+          android:layout_below="@+id/edit_medication_vaccine_name"
+          android:ems="10"
+          android:hint="Enter Dose"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_frequency"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_strength"
+          android:layout_alignRight="@+id/edit_medication_strength"
+          android:layout_below="@+id/edit_medication_strength"
+          android:ems="10"
+          android:hint="Enter Frequency"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_strength"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_dose"
+          android:layout_alignRight="@+id/edit_medication_dose"
+          android:layout_below="@+id/edit_medication_dose"
+          android:ems="10"
+          android:hint="Enter Strength"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView01"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_vaccine_name"
+          android:layout_alignBottom="@+id/edit_medication_vaccine_name"
+          android:layout_alignLeft="@+id/textView1"
+          android:text="Drug Name:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_dose"
+          android:layout_alignBottom="@+id/edit_medication_dose"
+          android:layout_alignLeft="@+id/TextView01"
+          android:text="Dose:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView03"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_strength"
+          android:layout_alignBottom="@+id/edit_medication_strength"
+          android:layout_alignLeft="@+id/TextView02"
+          android:text="Strength:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_type"
+          android:layout_alignBottom="@+id/edit_medication_type"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="14dp"
+          android:text="Type:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <EditText
+          android:id="@+id/edit_medication_date_started"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_frequency"
+          android:layout_alignRight="@+id/edit_medication_frequency"
+          android:layout_below="@+id/edit_medication_frequency"
+          android:ems="10"
+          android:hint="Enter Date Started"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_date_stopped"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_date_started"
+          android:layout_alignRight="@+id/edit_medication_date_started"
+          android:layout_below="@+id/edit_medication_date_started"
+          android:ems="10"
+          android:hint="Enter Date Stopped"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_reason"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_date_stopped"
+          android:layout_alignRight="@+id/edit_medication_date_stopped"
+          android:layout_below="@+id/edit_medication_date_stopped"
+          android:ems="10"
+          android:hint="Enter Reason"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_refill_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_date_stopped"
+          android:layout_alignRight="@+id/edit_medication_reason"
+          android:layout_below="@+id/edit_medication_reason"
+          android:ems="10"
+          android:hint="Enter Refill Date"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView04"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_frequency"
+          android:layout_alignBottom="@+id/edit_medication_frequency"
+          android:layout_alignLeft="@+id/TextView03"
+          android:text="Frequency:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView05"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_date_started"
+          android:layout_alignBottom="@+id/edit_medication_date_started"
+          android:layout_alignLeft="@+id/TextView04"
+          android:text="Date Started:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView06"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_date_stopped"
+          android:layout_alignBottom="@+id/edit_medication_date_stopped"
+          android:layout_alignLeft="@+id/TextView05"
+          android:text="Date Stopped:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView07"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_reason"
+          android:layout_alignBottom="@+id/edit_medication_reason"
+          android:layout_alignLeft="@+id/TextView06"
+          android:text="Reason:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/TextView08"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_refill_date"
+          android:layout_alignBottom="@+id/edit_medication_refill_date"
+          android:layout_alignLeft="@+id/TextView07"
+          android:text="Refill Date:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+      <EditText
+          android:id="@+id/edit_medication_type"
+          android:layout_width="175dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/header"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="14dp"
+          android:ems="10"
+          android:hint="Enter Type"
+          android:singleLine="true" />
+
+      <EditText
+          android:id="@+id/edit_medication_renew_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/edit_medication_refill_date"
+          android:layout_alignRight="@+id/edit_medication_refill_date"
+          android:layout_below="@+id/edit_medication_refill_date"
+          android:ems="10"
+          android:hint="Enter Renew Date"
+          android:singleLine="true" />
+
+      <TextView
+          android:id="@+id/TextView09"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/edit_medication_renew_date"
+          android:layout_alignBottom="@+id/edit_medication_renew_date"
+          android:layout_alignLeft="@+id/TextView08"
+          android:text="Renew Date:"
+          android:textColor="#000"
+          android:textSize="14sp" />
+
+  </RelativeLayout>
+
+</ScrollView>

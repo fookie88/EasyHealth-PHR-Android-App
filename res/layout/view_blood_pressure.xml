@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff" >
+
+      <!-- Header Starts -->
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+
+      <LinearLayout
+          android:id="@+id/header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="#ffffff"
+          android:orientation="vertical"
+          android:paddingBottom="5dip"
+          android:paddingTop="5dip" >
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/add_new_blood_pressure"
+          android:layout_width="200dp"
+          android:layout_height="35dp"
+          android:layout_above="@+id/back_blood_pressure"
+          android:layout_centerHorizontal="true"
+          android:text="Add New Blood Pressure"
+          android:textSize="15dp" />
+
+      <Button
+          android:id="@+id/back_blood_pressure"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:layout_alignLeft="@+id/add_new_blood_pressure"
+          android:layout_alignParentBottom="true"
+          android:layout_alignRight="@+id/add_new_blood_pressure"
+          android:text="Back"
+          android:textSize="15dp" />
+
+      <requestFocus
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+      <Spinner
+          android:id="@+id/blood_pressure_view_by"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/header"
+          android:layout_marginTop="26dp"
+          android:entries="@array/blood_pressure_arrays"
+          android:prompt="@string/view_by_prompt" />
+
+      <ListView
+          android:id="@+id/view_blood_pressure_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/add_new_blood_pressure"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/blood_pressure_view_by" >
+
+      </ListView>
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/header"
+          android:text="   View By:"
+          android:textColor="#000"
+          android:textSize="20sp" />
+
+  </RelativeLayout>
+
+</ScrollView>

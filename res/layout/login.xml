@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+  <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="#ffffff">
+ 
+        <!--  Header Starts-->
+        <!--  Header Ends -->
+ 
+        <!-- Footer Start -->
+
+	<LinearLayout
+	    android:id="@+id/footer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="90dip"
+	    android:layout_alignParentBottom="true"
+	    android:background="#ffffff"
+	    android:orientation="horizontal" >
+
+	</LinearLayout>
+        <!-- Footer Ends -->
+ 
+        <!-- Login Form -->
+        <!-- Login Form Ends -->
+
+   <LinearLayout
+       android:id="@+id/header"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:background="#ffffff"
+       android:orientation="vertical"
+       android:paddingBottom="5dip"
+       android:paddingTop="5dip" >
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="96dp"
+           android:layout_marginLeft="10dip"
+           android:src="@drawable/logo" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="66dp"
+           android:orientation="vertical"
+           android:padding="10dip" >
+
+           <TextView
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="ID"
+               android:textColor="#000000" />
+
+           <EditText
+               android:id="@+id/LoginID"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="20dip"
+               android:layout_marginTop="5dip"
+               android:hint="Please enter your ID"
+               android:singleLine="true" >
+
+               <requestFocus />
+           </EditText>
+
+           <TextView
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="Password"
+               android:textColor="#372c24"/>
+
+           <EditText
+               android:id="@+id/LoginPass"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dip"
+               android:hint="Please enter your password"
+               android:password="true"
+               android:singleLine="true" >
+</EditText>
+
+           <Button
+               android:id="@+id/regError"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dip"
+               android:text="Sign In" />
+
+           <EditText
+               android:id="@+id/login_error"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"/>
+
+           <TextView
+               android:id="@+id/link_to_register"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="40dip"
+               android:layout_marginTop="40dip"
+               android:gravity="center"
+               android:text="First time, please proceed to our registration forum."
+               android:textColor="#0b84aa"
+               android:textSize="20dip" />
+       </LinearLayout>
+
+   </LinearLayout>
+ 
+  </RelativeLayout>
+</ScrollView>
