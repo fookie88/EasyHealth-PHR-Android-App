@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -39,8 +40,9 @@ public class add_allergy extends Activity{
         
         submitAllergy.setOnClickListener(new View.OnClickListener() {
             String response;
-            String userID = getIntent().getExtras().getString("userID");
-            public void onClick(View v) {
+            SharedPreferences settings = getSharedPreferences("userData", 0);
+    		String userID = settings.getString("userID", "string");
+             public void onClick(View v) {
             	
             	postParameters.add(new BasicNameValuePair("userID",userID));
                 postParameters.add(new BasicNameValuePair("allergen",allergen.getText().toString()));

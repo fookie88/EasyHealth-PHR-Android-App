@@ -3,6 +3,7 @@ import java.math.*;
 import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -70,7 +71,11 @@ public class LoginActivity extends Activity {
 					
                     
                     Intent i = new Intent(getApplicationContext(), profile_page.class);
-                    i.putExtra("userID", userID+"");
+                    SharedPreferences settings = getSharedPreferences("userData", 0);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("userID", userID+"");
+                    editor.commit();
+
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					startActivity(i); 
 					// Close Login Screen
