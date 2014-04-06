@@ -373,5 +373,104 @@ public class CustomHttpClient {
 
  }
 
+ 
+ 
+ 
+ //Farrukh's custom HTTP client's version with string array as return type
+ 
+ 
+
+ public static String[] executeHttpGetArray(String url) throws Exception {
+
+
+  BufferedReader in = null;
+
+
+  try {
+
+
+   HttpClient client = getHttpClient();
+
+
+   HttpGet request = new HttpGet();
+
+
+   request.setURI(new URI(url));
+
+
+   HttpResponse response = client.execute(request);
+
+
+   in = new BufferedReader(new InputStreamReader(response.getEntity()
+
+
+     .getContent()));
+
+
+
+
+   StringBuffer sb = new StringBuffer("");
+
+
+   String line = "";
+
+
+   String NL = System.getProperty("line.separator");
+
+   String [] responseArray = null;
+   int i=0;
+   while ((line = in.readLine()) != null) {
+
+	
+    sb.append(line + NL);
+    responseArray[i]=line;
+    i= i+1;
+   }
+
+
+   in.close();
+
+
+
+
+   String result = sb.toString();
+
+
+   return responseArray;
+
+
+  } finally {
+
+
+   if (in != null) {
+
+
+    try {
+
+
+     in.close();
+
+
+    } catch (IOException e) {
+
+
+     Log.e("log_tag", "Error converting result "+e.toString()); 
+
+
+     e.printStackTrace();
+
+
+    }
+
+
+   }
+
+
+  }
+
+
+ }
+ 
+ 
 
 }
