@@ -1,15 +1,30 @@
 package com.example.phr;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class view_allergy extends Activity{
-	String userID;
+	String userID,query_response;
+	String [] values;
+	ArrayList<NameValuePair> postParameters;
+	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences settings = getSharedPreferences("userData", 0);
@@ -44,5 +59,74 @@ public class view_allergy extends Activity{
             }
 	});
         
+        postParameters = new ArrayList<NameValuePair>();        
+        postParameters.add(new BasicNameValuePair("userID",userID));
+		
+        
+        try {
+			values = CustomHttpClient.executeHttpPostArray("https://phr-ripudamanflora.rhcloud.com/mobile/view_allergy.php", postParameters);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+        //System.out.println(values);
+        //query_response.setText(values);
+        //Intent i = new Intent(getApplicationContext(), view_allergy.class);
+        //i.putExtra("userID", userID);
+        //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		//startActivity(i); 
+		
+    
+
+          final ListView listview = (ListView) findViewById(R.id.view_allergy_list);
+          //String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+           //   "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+           //   "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
+           //   "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
+           //   "Android", "iPhone", "WindowsMobile" };
+
+          final ArrayList<String> list = new ArrayList<String>();
+          for (int i = 0; i < values.length; ++i) {
+            list.add(values[i]);
+          }
+          final StableArrayAdapter adapter = new StableArrayAdapter(this,
+              android.R.layout.simple_list_item_1, list);
+          listview.setAdapter((ListAdapter) adapter);
+
+          
+        }
+
+        private class StableArrayAdapter extends ArrayAdapter<String> {
+
+          HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
+
+          public StableArrayAdapter(Context context, int textViewResourceId,
+              List<String> objects) {
+            super(context, textViewResourceId, objects);
+            for (int i = 0; i < objects.size(); ++i) {
+              mIdMap.put(objects.get(i), i);
+            }
+          }
+
+          public void notifyDataSetChanged() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+          public long getItemId(int position) {
+            String item = getItem(position);
+            return mIdMap.get(item);
+          }
+
+          @Override
+          public boolean hasStableIds() {
+            return true;
+          }
+
+        }
+
+       
+        
 	}
-}
