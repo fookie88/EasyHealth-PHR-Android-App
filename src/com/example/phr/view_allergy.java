@@ -24,11 +24,12 @@ public class view_allergy extends Activity{
 	String userID,query_response;
 	String [] values;
 	ArrayList<NameValuePair> postParameters;
-	
+	ArrayList<String> list;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences settings = getSharedPreferences("userData", 0);
 		userID = settings.getString("userID", "string");
+		System.out.println(userID);
          if (android.os.Build.VERSION.SDK_INT > 9) {
         	StrictMode.ThreadPolicy policy = 
         	        new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -69,7 +70,11 @@ public class view_allergy extends Activity{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		System.out.println(values[0]);
+		System.out.println(values[1]);
+		System.out.println(values[2]);
+		System.out.println(values[3]);
+		System.out.println(values[4]);
         //System.out.println(values);
         //query_response.setText(values);
         //Intent i = new Intent(getApplicationContext(), view_allergy.class);
@@ -86,10 +91,12 @@ public class view_allergy extends Activity{
            //   "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
            //   "Android", "iPhone", "WindowsMobile" };
 
-          final ArrayList<String> list = new ArrayList<String>();
+          list = new ArrayList<String>();
+          try{
           for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
           }
+          }catch(Exception e){System.out.println("No values were retrieved");}
           final StableArrayAdapter adapter = new StableArrayAdapter(this,
               android.R.layout.simple_list_item_1, list);
           listview.setAdapter((ListAdapter) adapter);
