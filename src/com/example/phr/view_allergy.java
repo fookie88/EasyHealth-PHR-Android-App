@@ -25,23 +25,29 @@ public class view_allergy extends Activity{
 	String [] values;
 	ArrayList<NameValuePair> postParameters;
 	ArrayList<String> list;
+	StableArrayAdapter adapter ;
+	ListView listView2; 
+	TextView addNewAllergy, backAllergy;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+       	StrictMode.ThreadPolicy policy = 
+       	        new StrictMode.ThreadPolicy.Builder().permitAll().build();
+       	StrictMode.setThreadPolicy(policy);
+       	} 
+
+        //Retrieving the User ID
         SharedPreferences settings = getSharedPreferences("userData", 0);
 		userID = settings.getString("userID", "string");
 		System.out.println(userID);
-         if (android.os.Build.VERSION.SDK_INT > 9) {
-        	StrictMode.ThreadPolicy policy = 
-        	        new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        	StrictMode.setThreadPolicy(policy);
-        	} 
-        // setting default screen to login.xml
-        
+        // setting default screen to view_allergy.xml
         setContentView(R.layout.view_allergy);
+
         //String [] arrayOfElements= getResources().getStringArray(getResources().getIdentifier("allergy_arrays","string" , getPackageName()));
         
-        TextView addNewAllergy= (TextView) findViewById(R.id.add_new_allergy);
-        TextView backAllergy= (TextView) findViewById(R.id.back_view_allergy);
+        addNewAllergy= (TextView) findViewById(R.id.add_new_allergy);
+        backAllergy= (TextView) findViewById(R.id.back_view_allergy);
         
         addNewAllergy.setOnClickListener(new View.OnClickListener() {
          	 
@@ -68,6 +74,7 @@ public class view_allergy extends Activity{
 			values = CustomHttpClient.executeHttpPostArray("https://phr-ripudamanflora.rhcloud.com/mobile/view_allergy.php", postParameters);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println("Problem getting the values");
 			e.printStackTrace();
 		}
 		System.out.println(values[0]);
@@ -84,7 +91,7 @@ public class view_allergy extends Activity{
 		
     
 
-          final ListView listview = (ListView) findViewById(R.id.view_allergy_list);
+        listView2= (ListView) findViewById(R.id.view_allergy_list);
           //String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
            //   "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
            //   "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
@@ -97,43 +104,10 @@ public class view_allergy extends Activity{
             list.add(values[i]);
           }
           }catch(Exception e){System.out.println("No values were retrieved");}
-          final StableArrayAdapter adapter = new StableArrayAdapter(this,
+          adapter = new StableArrayAdapter(this,
               android.R.layout.simple_list_item_1, list);
-          listview.setAdapter((ListAdapter) adapter);
+          listView2.setAdapter((ListAdapter) adapter);
 
           
         }
-
-        private class StableArrayAdapter extends ArrayAdapter<String> {
-
-          HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
-
-          public StableArrayAdapter(Context context, int textViewResourceId,
-              List<String> objects) {
-            super(context, textViewResourceId, objects);
-            for (int i = 0; i < objects.size(); ++i) {
-              mIdMap.put(objects.get(i), i);
-            }
-          }
-
-          public void notifyDataSetChanged() {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-          public long getItemId(int position) {
-            String item = getItem(position);
-            return mIdMap.get(item);
-          }
-
-          @Override
-          public boolean hasStableIds() {
-            return true;
-          }
-
-        }
-
-       
-        
-	}
+}
