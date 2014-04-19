@@ -7,10 +7,10 @@
  
     <string-array name="allergy_arrays">
         <item>Allergen</item>
-        <item>Allergic Reaction</item>
-        <item>Age of Onset</item>
+        <item>Allergic_Reaction</item>
+        <item>Age_of_Onset</item>
         <item>Severity</item>
-        <item>Onset of Reaction</item>
+        <item>Onset_of_Reaction</item>
     </string-array>
     
     <string-array name="immunization_arrays">

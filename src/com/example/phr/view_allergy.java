@@ -26,7 +26,9 @@ import android.widget.TextView;
 public class view_allergy extends Activity{
 	String userID,query_response;
 	ArrayList<NameValuePair> postParameters;
-	
+	Spinner allergyViewBy;
+	StableArrayAdapter adapter;
+	int iCurrentSelection;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences settings = getSharedPreferences("userData", 0);
@@ -43,7 +45,7 @@ public class view_allergy extends Activity{
         
         TextView addNewAllergy= (TextView) findViewById(R.id.add_new_allergy);
         TextView backAllergy= (TextView) findViewById(R.id.back_view_allergy);
-        Spinner allergyViewBy= (Spinner) findViewById(R.id.allergy_view_by);
+        allergyViewBy= (Spinner) findViewById(R.id.allergy_view_by);
         
         String view_by = allergyViewBy.getSelectedItem().toString();
         
@@ -114,11 +116,60 @@ public class view_allergy extends Activity{
           //for (int i = 0; i < values.length; ++i) {
            // list.add(values[i]);
           //}
-          final StableArrayAdapter adapter = new StableArrayAdapter(this,
+          adapter = new StableArrayAdapter(this,
               android.R.layout.simple_list_item_1, list);
           listview.setAdapter((ListAdapter) adapter);
-
           
+          //Spinner magic
+          iCurrentSelection = allergyViewBy.getSelectedItemPosition();
+
+		allergyViewBy.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+		    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) { 
+		    if (iCurrentSelection != i){
+		    	String view_by = allergyViewBy.getSelectedItem().toString();
+		    	 postParameters = new ArrayList<NameValuePair>();        
+		         postParameters.add(new BasicNameValuePair("userID",userID));
+		         postParameters.add(new BasicNameValuePair("view_by",view_by));
+		 		
+		         String[] values1 = new String[5];
+		         try {
+		 			values1 = CustomHttpClient.executeHttpPostArray("https://phr-ripudamanflora.rhcloud.com/mobile/view_allergy.php", postParameters);
+		 		} catch (Exception e) {
+		 			// TODO Auto-generated catch block
+		 			e.printStackTrace();
+		 		}
+		         
+		         JSONArray arr1 = null;
+		 		try {
+		 			arr1 = new JSONArray(values1[0]);
+		 		} catch (JSONException e1) {
+		 			// TODO Auto-generated catch block
+		 			e1.printStackTrace();
+		 		}
+		         List<String> list1 = new ArrayList<String>();
+		         for(int i1 = 0; i1 < arr1.length(); i1++){
+		             try {
+		 				list1.add(arr1.getJSONObject(i).getString(view_by));
+		 			} catch (JSONException e) {
+		 				// TODO Auto-generated catch block
+		 				e.printStackTrace();
+		 			}
+		         }
+		 	
+		         final ListView listview = (ListView) findViewById(R.id.view_allergy_list);
+		         listview.setAdapter((ListAdapter) adapter);
+		             
+		    }
+		    iCurrentSelection = i;
+		    } 
+		
+		    public void onNothingSelected(AdapterView<?> adapterView) {
+		        return;
+		    } 
+		}); 
+
+
+
         }
 
         private class StableArrayAdapter extends ArrayAdapter<String> {
