@@ -43,6 +43,8 @@ userID = settings.getString("userID", "string");
         
         TextView addNewblood_pressure= (TextView) findViewById(R.id.add_new_blood_pressure);
         TextView backblood_pressure= (TextView) findViewById(R.id.back_blood_pressure);
+        TextView blood_pressure_graph= (TextView) findViewById(R.id.view_blood_pressure_graph);
+
         //Spinner blood_pressureViewBy= (Spinner) findViewById(R.id.blood_pressure_view_by);
         
         //String view_by = blood_pressureViewBy.getSelectedItem().toString();
@@ -60,6 +62,15 @@ userID = settings.getString("userID", "string");
         
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), profile_page.class);
+                startActivity(i);
+
+            }
+});
+        
+        blood_pressure_graph.setOnClickListener(new View.OnClickListener() {
+            
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), view_blood_pressure_graph.class);
                 startActivity(i);
 
             }

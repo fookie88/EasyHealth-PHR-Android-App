@@ -67,7 +67,6 @@ public class view_blood_pressure_graph extends Activity {
         list4 = new ArrayList < String > ();
 
         TextView textView2 = (TextView) findViewById(R.id.textView2);
-        TextView addNewblood_pressure = (TextView) findViewById(R.id.add_new_blood_pressure);
         TextView backblood_pressure = (TextView) findViewById(R.id.back_blood_pressure);
 
         baseElement = getResources().getStringArray(R.array.blood_pressure_arrays);
@@ -280,18 +279,11 @@ public class view_blood_pressure_graph extends Activity {
          */
         
         
-        addNewblood_pressure.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), add_blood_pressure.class);
-                startActivity(i);
-
-            }
-        });
         backblood_pressure.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), profile_page.class);
+                Intent i = new Intent(getApplicationContext(), view_blood_pressure.class);
                 startActivity(i);
 
             }

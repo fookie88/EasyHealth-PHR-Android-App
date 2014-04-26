@@ -45,6 +45,7 @@
         <activity android:label="update_blood_pressure" android:name="update_blood_pressure" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:label="view_allergy" android:name="view_allergy" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:label="view_blood_pressure" android:name="view_blood_pressure" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:label="view_blood_pressure_graph" android:name="view_blood_pressure_graph" android:parentActivityName="view_blood_pressure" android:windowSoftInputMode="stateHidden|adjustPan"></activity>       
         <activity android:label="view_blood_sugar" android:name="view_blood_sugar" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name="view_emergency_contact" android:label="view_emergency_contact" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:label="view_height_weight" android:name="view_height_weight" android:parentActivityName="profile_page" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
