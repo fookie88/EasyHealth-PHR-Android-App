@@ -103,7 +103,7 @@ public class profile_page extends Activity{
         viewBloodPressure.setOnClickListener(new View.OnClickListener() {
        	 
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), view_blood_pressure.class);
+                Intent i = new Intent(getApplicationContext(), view_blood_pressure_graph.class);
  
                 startActivity(i); 
 

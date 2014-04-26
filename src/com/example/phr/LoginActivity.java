@@ -11,7 +11,7 @@ import android.widget.TextView;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import java.security.*;
-
+import android.text.Html;
 public class LoginActivity extends Activity {
     //@Override
     
@@ -53,7 +53,7 @@ public class LoginActivity extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
         	 
             public void onClick(View v) {
-            	String response;
+            	String response = "";
 
             	try {
                 	byte[] bytesOfMessage = inputPassword.getText().toString().getBytes("UTF-8");
@@ -65,7 +65,7 @@ public class LoginActivity extends Activity {
                     postParameters.add(new BasicNameValuePair("password",hashtext));
                     response = CustomHttpClient.executeHttpPost("https://phr-ripudamanflora.rhcloud.com/mobile/JSON.php", postParameters);
 					response = response.substring(1,response.length()-2);
-                    loginErrorMsg.setText(response);
+                    loginErrorMsg.setText(Html.fromHtml(response));
                     try{
                     userID =Integer.parseInt(response);
 					
@@ -81,11 +81,13 @@ public class LoginActivity extends Activity {
 					// Close Login Screen
 					finish();
                     }catch(Exception e){
-                    	loginErrorMsg.setText(response);                    	
+                    	loginErrorMsg.setText(Html.fromHtml(response));                    	
                     }   
                     
                 } catch (Exception e) {
+                     	loginErrorMsg.setText(Html.fromHtml(response));                    	                    		
                     e.printStackTrace();
+                    
                 }
             	           }
                 // Switching to Welcome screen

@@ -49,7 +49,7 @@ public final class R {
         public static final int add_immunization=0x7f07005c;
         public static final int add_medication=0x7f07005f;
         public static final int add_new_allergy=0x7f0700cb;
-        public static final int add_new_blood_pressure=0x7f0700cf;
+        public static final int add_new_blood_pressure=0x7f0700d0;
         public static final int add_new_blood_sugar=0x7f0700d3;
         public static final int add_new_emergency_contact=0x7f0700d7;
         public static final int add_new_height_weight=0x7f0700db;
@@ -65,7 +65,7 @@ public final class R {
         public static final int allergy_severity=0x7f070005;
         public static final int allergy_view_by=0x7f0700cd;
         public static final int back_allergy=0x7f07000b;
-        public static final int back_blood_pressure=0x7f0700d0;
+        public static final int back_blood_pressure=0x7f0700d1;
         public static final int back_caretaker=0x7f07004d;
         public static final int back_edit_account_info=0x7f070071;
         public static final int back_edit_allergy=0x7f070078;
@@ -83,7 +83,6 @@ public final class R {
         public static final int blood_pressure_pulse=0x7f070013;
         public static final int blood_pressure_response=0x7f070014;
         public static final int blood_pressure_systolic=0x7f070011;
-        public static final int blood_pressure_view_by=0x7f0700d1;
         public static final int blood_sugar=0x7f070018;
         public static final int blood_sugar_date=0x7f070017;
         public static final int blood_sugar_response=0x7f070019;
@@ -254,7 +253,8 @@ public final class R {
         public static final int textView1=0x7f070007;
         public static final int textView2=0x7f07008c;
         public static final int view_allergy_list=0x7f0700ce;
-        public static final int view_blood_pressure_list=0x7f0700d2;
+        public static final int view_blood_pressure=0x7f0700d2;
+        public static final int view_blood_pressure1=0x7f0700cf;
         public static final int view_blood_sugar_list=0x7f0700d6;
         public static final int view_caretakers=0x7f070067;
         public static final int view_emergency_contact_list=0x7f0700da;
@@ -290,7 +290,7 @@ public final class R {
         public static final int update_person_info=0x7f030016;
         public static final int update_temperature=0x7f030017;
         public static final int view_allergy=0x7f030018;
-        public static final int view_blood_pressure=0x7f030019;
+        public static final int view_blood_pressure_graph=0x7f030019;
         public static final int view_blood_sugar=0x7f03001a;
         public static final int view_emergency_contact=0x7f03001b;
         public static final int view_height_weight=0x7f03001c;

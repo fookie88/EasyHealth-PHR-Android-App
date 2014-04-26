@@ -31,17 +31,24 @@
        android:id="@+id/header"
        android:layout_width="fill_parent"
        android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
        android:layout_alignParentTop="true"
-       android:layout_centerHorizontal="true"
        android:background="#ffffff"
        android:orientation="vertical"
        android:paddingBottom="5dip"
        android:paddingTop="5dip" >
 
        <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="96dp"
+           android:layout_width="201dp"
+           android:layout_height="146dp"
+           android:layout_gravity="center"
            android:layout_marginLeft="10dip"
+           android:layout_weight="0.27"
+           android:paddingBottom="20dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="20dp"
+           android:scaleType="fitCenter"
            android:src="@drawable/logo" />
 
        <LinearLayout
@@ -64,16 +71,13 @@
                android:layout_marginBottom="20dip"
                android:layout_marginTop="5dip"
                android:hint="Please enter your ID"
-               android:singleLine="true" >
-
-               <requestFocus />
-           </EditText>
+               android:singleLine="true" />
 
            <TextView
                android:layout_width="fill_parent"
                android:layout_height="wrap_content"
                android:text="Password"
-               android:textColor="#372c24"/>
+               android:textColor="#372c24" />
 
            <EditText
                android:id="@+id/LoginPass"
@@ -82,8 +86,7 @@
                android:layout_marginTop="5dip"
                android:hint="Please enter your password"
                android:password="true"
-               android:singleLine="true" >
-</EditText>
+               android:singleLine="true" />
 
            <Button
                android:id="@+id/regError"
@@ -97,8 +100,8 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:background="#ffffff"
-          	   android:ems="10"
-               android:textColor="#000"/>
+               android:ems="10"
+               android:textColor="#000" />
 
            <TextView
                android:id="@+id/link_to_register"
@@ -111,7 +114,6 @@
                android:textColor="#0b84aa"
                android:textSize="20dip" />
        </LinearLayout>
-
    </LinearLayout>
  
   </RelativeLayout>

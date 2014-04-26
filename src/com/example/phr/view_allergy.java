@@ -24,6 +24,10 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.view.*;
+import com.jjoe64.graphview.*;
+import com.jjoe64.graphview.GraphView.*;
+import android.widget.LinearLayout;
+
 public class view_allergy extends Activity {
     String userID, query_response;
     ArrayList < NameValuePair > postParameters,postParametersInit;
@@ -33,6 +37,7 @@ public class view_allergy extends Activity {
     ListView listview;
     List < String > list,listInit;
     String baseElement;
+    LinearLayout layout;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences settings = getSharedPreferences("userData", 0);
@@ -48,7 +53,7 @@ public class view_allergy extends Activity {
         //String [] arrayOfElements= getResources().getStringArray(getResources().getIdentifier("allergy_arrays","string" , getPackageName()));
         list = new ArrayList < String > ();
         listInit = new ArrayList < String > ();
-
+        
         TextView textView2 = (TextView) findViewById(R.id.textView2);
         TextView addNewAllergy = (TextView) findViewById(R.id.add_new_allergy);
         TextView backAllergy = (TextView) findViewById(R.id.back_view_allergy);
@@ -60,10 +65,6 @@ public class view_allergy extends Activity {
         postParametersInit.add(new BasicNameValuePair("userID", userID));
         postParametersInit.add(new BasicNameValuePair("view_by",baseElement));
         String[] valuesInit = new String[5];
-        
-        /*
-         * Code Ends Here for removing first item..
-         */
         
         
         try {

@@ -5,9 +5,10 @@
     android:fillViewport="true" >
 
   <RelativeLayout
+      android:id="@+id/view_blood_pressure1"
       android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:background="#ffffff" >
+      android:layout_height="126dp"
+      android:background="#B8B8B8" >
 
       <!-- Header Starts -->
       <!-- Header Ends -->
@@ -54,35 +55,39 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" />
 
-      <Spinner
-          android:id="@+id/blood_pressure_view_by"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentRight="true"
-          android:entries="@array/blood_pressure_arrays"
-          android:prompt="@string/view_by_prompt"
-          android:visibility="visible" />
-
-      <ListView
-          android:id="@+id/view_blood_pressure_list"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_above="@+id/add_new_blood_pressure"
-          android:layout_alignParentLeft="true"
-          android:layout_below="@+id/blood_pressure_view_by"
-          android:background="#c896aa"
-          android:textColor="#100000" >
-      </ListView>
-
       <TextView
           android:id="@+id/textView2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignBottom="@+id/blood_pressure_view_by"
+          android:layout_alignBottom="@+id/header"
           android:layout_alignParentLeft="true"
           android:layout_alignParentTop="true"
           android:textColor="#000001"
           android:textSize="20dp" />
+
+      <LinearLayout
+          android:id="@+id/view_blood_pressure1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/add_new_blood_pressure"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:orientation="horizontal" >
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/view_blood_pressure"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/view_blood_pressure1"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true" 
+          android:orientation="horizontal">
+
+
+      </LinearLayout>
+
   </RelativeLayout>
 
 </ScrollView>
