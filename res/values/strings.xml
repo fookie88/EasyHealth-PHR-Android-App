@@ -15,32 +15,32 @@
     
     <string-array name="immunization_arrays">
         <item>Date</item>
-        <item>Immunization Type</item>
-        <item>Vaccine Name</item>
-        <item>Manufacture</item>
+        <item>Immunization_Type</item>
+        <item>Vaccine_Name</item>
+        <item>Immunization_Manufacture</item>
         <item>Route</item>
         <item>Dose</item>
         <item>Location</item>
-        <item>Next Date</item>
+        <item>Next_Date</item>
         <item>Comments</item>
     </string-array>
     
     <string-array name="blood_sugar_arrays">
         <item>Date</item>
-        <item>Blood Sugar</item>
+        <item>Blood_Sugar</item>
     </string-array>
     
     <string-array name="medication_arrays">
-        <item>Drug</item>
-        <item>Medication</item>
+        <item>Drug_Name</item>
+        <item>Medication_Type</item>
         <item>Dose</item>
         <item>Strength</item>
         <item>Frequency</item>
-        <item>Date Started</item>
-        <item>Date Stopped</item>
+        <item>Date_Started</item>
+        <item>Date_Stopped</item>
         <item>Reason</item>
-        <item>Refill Date</item>
-        <item>Renew Date</item>
+        <item>Refill_Date</item>
+        <item>Renew_Date</item>
     </string-array>
     
     <string-array name="temperature_arrays">
@@ -62,11 +62,11 @@
     </string-array>
     
     <string-array name="emergency_contact_arrays">
-        <item>Contact Name</item>
-        <item>Number 1</item>
-        <item>Number 2</item>
-        <item>Email</item>
-        <item>Relationship</item>
+        <item>Emergency_Contact_Name</item>
+        <item>Emergency_Contact_Number1</item>
+        <item>Emergency_Contact_Number2</item>
+        <item>Emergency_Contact_Email</item>
+        <item>Emergency_Contact_Relationship</item>
     </string-array>
 	
 </resources>

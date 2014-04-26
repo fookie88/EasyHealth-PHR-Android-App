@@ -58,8 +58,7 @@
           android:id="@+id/allergy_view_by"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignBottom="@+id/textView1"
-          android:layout_toRightOf="@+id/textView2"
+          android:layout_alignParentRight="true"
           android:entries="@array/allergy_arrays"
           android:prompt="@string/view_by_prompt"
           android:visibility="visible" />
@@ -71,19 +70,9 @@
           android:layout_above="@+id/add_new_allergy"
           android:layout_alignParentLeft="true"
           android:layout_below="@+id/allergy_view_by"
-          android:background="#ffffff" 
-		  android:textColor="#100000">
+          android:background="#c896aa"
+          android:textColor="#100000" >
       </ListView>
-
-      <TextView
-          android:id="@+id/textView1"
-          android:layout_width="150dp"
-          android:layout_height="wrap_content"
-          android:layout_alignParentRight="true"
-          android:layout_alignParentTop="true"
-          android:text="View By:"
-          android:textColor="#000"
-          android:textSize="20sp" />
 
       <TextView
           android:id="@+id/textView2"
@@ -92,9 +81,8 @@
           android:layout_alignBottom="@+id/allergy_view_by"
           android:layout_alignParentLeft="true"
           android:layout_alignParentTop="true"
-          android:layout_toLeftOf="@+id/textView1"
-          android:textColor="#000001" />
-
+          android:textColor="#000001"
+          android:textSize="20dp" />
   </RelativeLayout>
 
 </ScrollView>
