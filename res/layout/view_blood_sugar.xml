@@ -36,13 +36,13 @@
           android:id="@+id/add_new_blood_sugar"
           android:layout_width="200dp"
           android:layout_height="35dp"
-          android:layout_above="@+id/back_view_blood_sugar"
+          android:layout_above="@+id/back_blood_sugar"
           android:layout_centerHorizontal="true"
           android:text="Add New Blood Sugar"
           android:textSize="15dp" />
 
       <Button
-          android:id="@+id/back_view_blood_sugar"
+          android:id="@+id/back_blood_sugar"
           android:layout_width="200dp"
           android:layout_height="35dp"
           android:layout_alignLeft="@+id/add_new_blood_sugar"
@@ -54,35 +54,53 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" />
 
-      <Spinner
-          android:id="@+id/blood_sugar_view_by"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentRight="true"
-          android:entries="@array/blood_sugar_arrays"
-          android:prompt="@string/view_by_prompt"
-          android:visibility="visible" />
-
       <ListView
-          android:id="@+id/view_blood_sugar_list"
-          android:layout_width="match_parent"
+          android:id="@+id/view_blood_sugar_date"
+          android:layout_width="180dip"
           android:layout_height="wrap_content"
           android:layout_above="@+id/add_new_blood_sugar"
           android:layout_alignParentLeft="true"
-          android:layout_below="@+id/blood_sugar_view_by"
-          android:background="#c896aa"
+          android:layout_below="@+id/textView2"
+          android:background="#B8B8B8"
           android:textColor="#100000" >
       </ListView>
 
       <TextView
           android:id="@+id/textView2"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignBottom="@+id/blood_sugar_view_by"
+          android:layout_height="50dp"
           android:layout_alignParentLeft="true"
           android:layout_alignParentTop="true"
+          android:layout_alignRight="@+id/view_blood_sugar_date"
+          android:gravity="center"
+          android:text="Date"
           android:textColor="#000001"
-          android:textSize="20dp" />
+          android:textSize="18sp" />
+
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_alignLeft="@+id/view_blood_sugar_blood_sugar"
+          android:layout_alignParentTop="true"
+          android:layout_alignRight="@+id/view_blood_sugar_blood_sugar"
+          android:gravity="center"
+          android:text="Blood Sugar"
+          android:textColor="#000001"
+          android:textSize="18sp" />
+
+      <ListView
+          android:id="@+id/view_blood_sugar_blood_sugar"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/add_new_blood_sugar"
+          android:layout_alignParentRight="true"
+          android:layout_alignTop="@+id/view_blood_sugar_date"
+          android:background="#B8B8B8"
+          android:textColor="#100000" >
+
+      </ListView>
+
   </RelativeLayout>
 
 </ScrollView>
